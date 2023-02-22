@@ -17,6 +17,14 @@ export default function Counter(props){
 
         setCount(0)
     }
+    
+    const doubleHandler = () => {
+        setCount(oldCount=> oldCount +2)
+    }
+    const mouseIncreaseHandler = () =>{
+
+        setCount(oldCount => oldCount + 3)
+    }
 
     let title = '';
     
@@ -43,6 +51,11 @@ export default function Counter(props){
             <button onClick={increaseHandler}>+</button>
             <button onClick={decreaseHandler}>-</button>
             <button onClick={clearCounter}>Clear</button>
+            <button onDoubleClick={doubleHandler}>++</button>
+            <button onMouseOver={mouseIncreaseHandler}>{count >=10 
+            ? <h2>Medium clicks </h2>
+            : <h4>Normal clicks</h4>
+            }</button>
         </div>
     );
 }
