@@ -30,7 +30,7 @@ function App() {
 
         <Header>Librery</Header>
 
-        <Timer start={1}/>
+        <Timer start={0}/>
         <Clicker/>
 
         <Counter/>
